@@ -270,7 +270,7 @@ namespace ResxTranslator.ResourceOperations
                 return;
             try
             {
-                UpdateFile(Filename, Properties.Resources.ColNameNoLang, false, true);
+                //UpdateFile(Filename, Properties.Resources.ColNameNoLang, false, true);
 
                 foreach (var languageHolder in Languages.Values)
                 {
@@ -392,8 +392,8 @@ namespace ResxTranslator.ResourceOperations
                     row[colNameError] = true;
                     return;
                 }
-                var colNameNoLang = Properties.Resources.ColNameNoLang;
-                if (row[colNameNoLang] == DBNull.Value || string.IsNullOrEmpty((string)row[colNameNoLang]))
+                var colNameComment = Properties.Resources.ColNameComment;
+                if (row[colNameComment] == DBNull.Value || string.IsNullOrEmpty((string)row[colNameComment]) || !((string)row[colNameComment]).Equals("done", StringComparison.InvariantCultureIgnoreCase))
                 {
                     // There are translations, but the main key is missing
                     row[colNameError] = true;
