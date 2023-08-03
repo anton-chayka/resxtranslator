@@ -52,3 +52,7 @@ _ReSharper*/
 packages/
 
 /db
+src/.idea/.idea.ResxTranslator/.idea/.name
+src/.idea/.idea.ResxTranslator/.idea/encodings.xml
+src/.idea/.idea.ResxTranslator/.idea/indexLayout.xml
+src/.idea/.idea.ResxTranslator/.idea/vcs.xml
